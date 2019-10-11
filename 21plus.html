@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>21 Plus</title>
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Creepster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/95a97a493a.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Our CSS files -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/andrew.css">
+
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header class="row align-items-center py-4">
+            <div class="col-sm-1">
+
+            </div>
+            <div class="col-sm-8">
+                <div id="page-title">
+                    <a href="index.html">FRIGHT FINDER</a>
+                </div>
+                <h5 id="title-h5">What spooky events are happening in your
+                    area?</h5>
+            </div>
+            <div class="col-sm-3">
+                <form>
+                    <label for="city-search" id="search-label">Search by City!</label>
+                    <div class="input-group">
+                        <input type="search" class="form-control form-control-sm mr-1" id="city-search">
+                        <span class="input-group-append">
+                            <button class="btn btn-outline-secondary btn-sm" type="button" id="sBtn" href="./search.html">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </header>
+
+    </div>
+
+    <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                        <nav class="navbar navbar-dark  indigo darken-2">
+                                <!-- Collapse button -->
+                                <button class="navbar-toggler third-button" type="button" data-toggle="collapse"
+                                    data-target="#navbarSupportedContent22" aria-controls="navbarSupportedContent22"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <div class="animated-icon3"><span></span><span></span><span></span></div>
+                                </button>
+                                <!-- Collapsible content -->
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent22">
+                                    <!-- Links -->
+                                    <ul class="navbar-nav mr-auto">
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="21plus.html">21+</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="family.html">Family</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link" href="food.html">Food</a>
+                                            </li> <li class="nav-item">
+                                                    <a class="nav-link" href="neighborhood.html">In your neighborhood</a>
+                                                </li>
+                                    </ul>
+                                    <!-- Links -->
+                                </div>
+                                <!-- Collapsible content -->
+                            </nav>
+                </div>
+        
+            </div>
+        </div>
+   
+
+
+    </div>
+    <div class="container mt-3" id="main">
+        <div class="row">
+            <div class="col-sm-2 mt-2">
+     
+            </div>
+            <div class="col-sm-10">
+                <div class="row">
+                    <div class="col-sm-6 events-col" id="21plus-list" data-category="singles_social">
+                            <h2>21 AND UP</h2>
+                        <!-- Divs for events will be dynamically coded here with jQuery -->
+                    </div>
+                    <div class="col-sm-6 map-container">
+                        <!-- Hard code container for map here -->
+                        <div id="21plus-map" class="map-display">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bootstrap jQuery and JS-->
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+            <!-- Our Javascript & jQuery-->
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+                integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+            <!-- <script src="./assets/javascript/web.js"></script> -->
+            <script src="./assets/javascript/divtest.js"></script>
+            <script src="./assets/javascript/map.js"></script>
+
+            <!-- Google API -->
+            <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcP_iPWr3BoBerRke2pVaWWynlarDRego&libraries=places&callback=myMap"
+                async defer></script>
+
+</body>
+
+</html>
