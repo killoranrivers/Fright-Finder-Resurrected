@@ -6,7 +6,7 @@ function request(query) {
     this.fields = ["name", "geometry"];
 }
 function myMap(eventsLocs) {
-    console.log(eventsLocs);
+    
     let categoryMap = $(".map-container > div").attr("id");
     let tmpCenter = new google.maps.LatLng(0, 0);
     let bounds = new google.maps.LatLngBounds();
@@ -31,14 +31,14 @@ function myMap(eventsLocs) {
         map.panToBounds(bounds);
     }
     function addressMarkers(addresses) {
-        addresses.forEach(function (address) {
+        addresses.forEach(function(address) {
             let location = new request(address);
             let service = new google.maps.places.PlacesService(map);
 
             service.findPlaceFromQuery(location, function (results, status) {
                 if (status === google.maps.places.PlacesServiceStatus.OK) {
                     createMarker(results[0]);
-                }
+                };
             });
         });
     };

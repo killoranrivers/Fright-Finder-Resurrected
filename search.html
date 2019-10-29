@@ -52,7 +52,7 @@
                             <a href="./search.html"><button class="btn btn-outline-secondary btn-sm" type="button"
                                     id="sBtn">
                                     <i class="fas fa-search"></i>
-                                </button></a> </span>
+                                </button></a></span>
                     </div>
                 </form>
             </div>
@@ -84,9 +84,9 @@
                         <h2>EVENTS IN <span id="city-name"></span></h2>
                         <!-- Divs for events will be dynamically coded here with jQuery -->
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 map-container">
                         <!-- Hard code container for map here -->
-                        <div id="search-map" class="map-style">
+                        <div id="search-map" class="map-display">
 
                         </div>
                     </div>
@@ -101,14 +101,13 @@
             <!-- Our Javascript & jQuery-->
             <script src="https://code.jquery.com/jquery-3.4.1.min.js"
                 integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-            <!-- <script src="./assets/javascript/web.js"></script> -->
-            <script src="./assets/javascript/divtest.js"></script>
+            <script src="./assets/javascript/city-search.js"></script>
             <script src="./assets/javascript/map.js"></script>
 
-            <!-- Google API -->
-            <script
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcP_iPWr3BoBerRke2pVaWWynlarDRego&libraries=places&callback=myMap"
-                async defer></script>
+          <!-- Google API -->
+          <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmgnOe6famr_fVMN3TqN9mvCOkpDucmCE&libraries=places&callback=myMap"
+          async defer></script>
 </body>
 
 </html>
