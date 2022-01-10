@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=>, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>In your Neighborhood</title>
+    <title>Fright Finder | Neighborhood</title>
 
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Creepster&display=swap" rel="stylesheet">
@@ -22,62 +21,37 @@
     <!-- Our CSS files -->
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/andrew.css">
-
-
-
-</head>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=>, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>21 Plus</title>
-
-    <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Creepster&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/95a97a493a.js" crossorigin="anonymous"></script>
-
-    <!-- Bootstrap CSS and JS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/darkly/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-w+8Gqjk9Cuo6XH9HKHG5t5I1VR4YBNdPt/29vwgfZR485eoEJZ8rJRbm3TR32P6k" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-    <!-- Our CSS files -->
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/andrew.css">
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-database.js"></script>
 
 
 </head>
 
 <body>
-
-
-    <div class="container-fluid">
+    <div class="container-fluid" id="header">
         <header class="row align-items-center py-4">
-            <div class="col-sm-1">
-                <!-- Toggle button here -->
-
+            <!-- Category Dropdown -->
+            <div class="col-sm-2">
+                <div class="dropdown show">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Find Events
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="21plus.html">21+</a>
+                        <a class="dropdown-item" href="family.html">Family Friendly</a>
+                        <a class="dropdown-item" href="food.html">Food Related</a>
+                        <a class="dropdown-item" href="neighborhood.html">In Your Neighborhood</a>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-8">
+            <!-- Page Title -->
+            <div class="col-sm-7">
                 <div id="page-title">
                     <a href="index.html">FRIGHT FINDER</a>
                 </div>
                 <h5 id="title-h5">What spooky events are happening in your
                     area?</h5>
             </div>
+            <!-- City Search -->
             <div class="col-sm-3">
                 <form>
                     <label for="city-search" id="search-label">Search by City!</label>
@@ -92,78 +66,44 @@
                 </form>
             </div>
         </header>
-
     </div>
 
     <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <!--Navbar-->
-                <nav class="navbar navbar-light warning-color-dark lighten-4">
-                    <!-- Collapse button -->
-                    <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1"
-                        aria-expanded="false" aria-label="Toggle navigation"><i
-                            class="fas fa-bars fa-1x"></i></span></button>
+        <div class="container mt-3" id="main">
+            <div class="row">
+                <div class="col-sm-7 events-col" id="neighborhood-list" data-category="community">
+                    <h2>IN YOUR NEIGHBORHOOD</h2>
+                    <!-- Divs for events will be dynamically coded here with jQuery -->
+                </div>
+                <div class="col-sm-5 map-container">
+                    <!-- Hard code container for map here -->
+                    <div id="neighborhood-map" class="map-display mx-auto">
 
-                    <!-- Collapsible content -->
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-
-                        <!-- Links -->
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="21plus.html">21+ <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="neighborhood.html">In Your Neighborhood</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"></a>
-                            </li>
-                        </ul>
-                        <!-- Links -->
-                </nav>
-            </div>
-        </div>
-    </div>
-
-    <div class="container mt-3" id="main">
-        <div class="row">
-            <div class="col-sm-2 mt-2">
-                <!-- Vertical navbar goes here -->
-            </div>
-            <div class="col-sm-10">
-                <div class="row">
-                    <div class="col-sm-6 events-col" id="neighborhood-list" data-category="community">
-                            <h2>IN YOUR NEIGHBORHOOD</h2>
-                        <!-- Divs for events will be dynamically coded here with jQuery -->
-                    </div>
-                    <div class="col-sm-6 map-container">
-                        <!-- Hard code container for map here -->
-                        <div id="neighborhood-map" class="map-display">
-
-                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Bootstrap jQuery and JS-->
+        </div>
 
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <!-- Bootstrap jQuery and JS-->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 
-            <!-- Our Javascript & jQuery-->
-            <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-                integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-                <script src="./assets/javascript/event-search.js"></script>
-            <script src="./assets/javascript/map.js"></script>
+        <!-- Our Javascript & jQuery-->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="./assets/javascript/event-search.js"></script>
+        <script src="./assets/javascript/map.js"></script>
 
-            <!-- Google API -->
-            <script
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmgnOe6famr_fVMN3TqN9mvCOkpDucmCE&libraries=places&callback=myMap"
-                async defer></script>
-</body>
+        <!-- Google API -->
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmgnOe6famr_fVMN3TqN9mvCOkpDucmCE&libraries=places&callback=myMap"
+            async defer></script>
+    </body>
 
 
 </html>

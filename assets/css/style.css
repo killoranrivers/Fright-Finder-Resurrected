@@ -15,25 +15,33 @@ body {
     background-color: black;
 }
 header {
-    background: black;
-    color: orange;
+    background-image: url("../images/bats2.png");
+    background-position: center center;
+    background-size: cover;
+    height: 22vh;
     border-bottom: 5px double orange; 
 }
 #page-title {
-    font-family: 'Creepster', cursive, serif;
-    font-size: 70px;
+    background-color: #000000;
+    border-radius: 10px;
     text-align: center;
+    width: fit-content;
 }
 #page-title a {
-    color: rgb(112, 120, 128);
+    color: white;
+    font-family: 'Creepster', cursive, serif;
+    font-size: 80px;
 }
 #page-title a:hover {
     text-decoration: none;
+    color: rgb(167, 166, 166);
 }
-#title-h5 {
+#page-title h5 {
     font-family: 'Open Sans Condensed', sans-serif;
     font-style: italic;
-    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    color: orange;
 }
 .carousel {
     margin: 15px auto;
@@ -62,10 +70,6 @@ header {
     max-height: 300px;
     min-height: 300px;
 }
-nav {
-  border: 2px solid orange;  
-
-}
 #search-label {
     padding-bottom: 5px;
     color: orange;
@@ -92,7 +96,4 @@ nav {
     display: inline-block;
     line-height: 25px;
     vertical-align: middle;
-}
-.navbar-collapse {
-    font-color: orange;
 }

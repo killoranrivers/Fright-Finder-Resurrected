@@ -20,26 +20,38 @@
     <!-- Our CSS files -->
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/andrew.css">
 
 
 
 </head>
 
 <body>
-
-
-    <div class="container-fluid">
+    <div class="container-fluid" id="header">
         <header class="row align-items-center py-4">
-
-            <div class="col-sm-2"></div>
-            <div class="col-sm-7">
-                <div id="page-title">
-                    <a href="index.html">FRIGHT FINDER</a>
+            <!-- Category Dropdown -->
+            <div class="col-sm-2">
+                <div class="dropdown show">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Find Events
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="21plus.html">21+</a>
+                        <a class="dropdown-item" href="family.html">Family Friendly</a>
+                        <a class="dropdown-item" href="food.html">Food Related</a>
+                        <a class="dropdown-item" href="neighborhood.html">In Your Neighborhood</a>
+                    </div>
                 </div>
-                <h5 id="title-h5">What spooky events are happening in your
-                    area?</h5>
             </div>
+            <!-- Page Title -->
+            <div class="col-sm-7">
+                <div id="page-title" class="mx-auto p-3">
+                    <a href="index.html">FRIGHT FINDER</a>
+                    <h5 id="title-h5">What spooky events are happening in your
+                        area?</h5>
+                </div>
+            </div>
+            <!-- City Search -->
             <div class="col-sm-3">
                 <form>
                     <label for="city-search" id="search-label">Search by City!</label>
@@ -54,45 +66,6 @@
                 </form>
             </div>
         </header>
-
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-2">
-                <nav class="navbar navbar-dark  indigo darken-2">
-                    <!-- Collapse button -->
-                    <button class="navbar-toggler third-button" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent22" aria-controls="navbarSupportedContent22"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <div class="animated-icon3"><span></span><span></span><span></span></div>
-                    </button>
-                    <!-- Collapsible content -->
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent22">
-                        <!-- Links -->
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="21plus.html">21+</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="family.html">Family</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="food.html">Food</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="neighborhood.html">In your neighborhood</a>
-                            </li>
-                        </ul>
-                        <!-- Links -->
-                    </div>
-                    <!-- Collapsible content -->
-                </nav>
-            </div>
-
-        </div>
     </div>
 
 
@@ -154,14 +127,17 @@
         <!-- Bootstrap jQuery and JS-->
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 
         <!-- Our Javascript & jQuery-->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-            <script src="./assets/javascript/event-search.js"></script>
-            <script src="./assets/javascript/map.js"></script>
+        <script src="./assets/javascript/event-search.js"></script>
+        <script src="./assets/javascript/map.js"></script>
 
 </body>
 
