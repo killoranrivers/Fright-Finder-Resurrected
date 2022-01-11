@@ -5,7 +5,7 @@ p {
     font: italic;
 }
 body {
-    background-color: gray;
+    background-color: black;
     background-image: url("../images/bats-pattern.jpg");
     background-repeat: no-repeat;
     background-size: cover; 
@@ -19,13 +19,11 @@ header {
     background-position: center center;
     background-size: cover;
     height: 22vh;
-    border-bottom: 5px double orange; 
 }
 #page-title {
     background-color: #000000;
     border-radius: 10px;
     text-align: center;
-    width: fit-content;
 }
 #page-title a {
     color: white;
@@ -42,6 +40,23 @@ header {
     font-weight: bold;
     font-size: 22px;
     color: orange;
+}
+#search-label {
+    padding-bottom: 5px;
+    color: black;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+.dropdown-menu {
+    box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#dropdownMenuLink {
+    background-color: black;
+    font-size: 20px;
+}
+.dropdown-item {
+    font-size: 20px;
 }
 .carousel {
     margin: 15px auto;
@@ -69,11 +84,6 @@ header {
 .carousel-item img {
     max-height: 300px;
     min-height: 300px;
-}
-#search-label {
-    padding-bottom: 5px;
-    color: orange;
-    font-family: 'Open Sans Condensed', sans-serif;
 }
 .event-div {
     background: white;

@@ -23,34 +23,17 @@
 </head>
 
 <body>
-    <div class="container-fluid" id="header">
-        <header class="row align-items-center py-4">
-            <!-- Category Dropdown -->
-            <div class="col-sm-2">
-                <div class="dropdown show">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Find Events
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="21plus.html">21+</a>
-                        <a class="dropdown-item" href="family.html">Family Friendly</a>
-                        <a class="dropdown-item" href="food.html">Food Related</a>
-                        <a class="dropdown-item" href="neighborhood.html">In Your Neighborhood</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Page Title -->
-            <div class="col-sm-7">
-                <div id="page-title">
+    <div class="container-fluid h-100" id="header">
+        <header class="row h-100 justify-content-between py-4">
+            <!-- Page Title & City Search-->
+            <div class="col-sm-auto">
+                <div id="page-title" class="mx-auto p-3">
                     <a href="index.html">FRIGHT FINDER</a>
+                    <h5 id="title-h5">What spooky events are happening in your
+                        area?</h5>
                 </div>
-                <h5 id="title-h5">What spooky events are happening in your
-                    area?</h5>
-            </div>
-            <!-- City Search -->
-            <div class="col-sm-3">
-                <form>
+
+                <form class="mt-2">
                     <label for="city-search" id="search-label">Search by City!</label>
                     <div class="input-group">
                         <input type="search" class="form-control form-control-sm mr-1" id="city-search">
@@ -62,8 +45,27 @@
                     </div>
                 </form>
             </div>
+            <!-- Category Dropdown -->
+            <div class="col-sm-auto">
+                <div class="dropdown show">
+                    <a class="btn btn-secondary dropdown-toggle p-3" href="#" role="button" id="dropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="-10, 15">
+                        By Category
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="21plus.html">21+</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="family.html">Family Friendly</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="food.html">Food Related</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="neighborhood.html">In Your Neighborhood</a>
+                    </div>
+                </div>
+            </div>
         </header>
     </div>
+
 
     <div class="container mt-3" id="main">
         <div class="row">
