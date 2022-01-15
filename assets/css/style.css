@@ -1,9 +1,6 @@
 * {
     box-sizing: border-box;
 }
-p {
-    font: italic;
-}
 body {
     background-color: black;
     background-image: url("../images/bats-pattern.jpg");
@@ -58,21 +55,19 @@ header {
 .dropdown-item {
     font-size: 20px;
 }
-.carousel {
-    margin: 15px auto;
-}
 
 #main {
     background: black;
 }
 #main p {
     font-family: 'Open Sans Condensed', sans-serif;
-    color: white;
-     font-size: 18px;
-     line-height: 1.5em;
-     padding: 0px 50px 40px;
-     text-align: center;
-     padding-top: 40px;
+    color: rgb(250, 177, 41);
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.5em;
+    padding: 0px 50px 40px;
+    text-align: center;
+    padding-top: 40px;
 }
 #main h2 {
     text-align: center;
@@ -80,6 +75,12 @@ header {
     font-size: 40px;
     color: orange;
     margin-bottom: 45px;
+}
+#content-div {
+    background-color: rgb(27, 27, 27);
+}
+.carousel {
+    margin: 15px auto;
 }
 .carousel-item img {
     max-height: 300px;
@@ -95,11 +96,6 @@ header {
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 20px;
     text-align: center;
-}
-.map-display {
-    margin: 40px 0px 40px;
-    width: 370px;
-    height: 310px;
 }
 .events-col h3 {
     font-weight: bold;

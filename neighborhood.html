@@ -71,17 +71,11 @@
 
 
     <body>
-        <div class="container mt-3" id="main">
-            <div class="row">
-                <div class="col-sm-7 events-col" id="neighborhood-list" data-category="community">
+        <div class="container my-5" id="main">
+            <div class="row" id="content-div">
+                <div class="col-sm-12 events-col py-3" id="neighborhood-list" data-category="community">
                     <h2>IN YOUR NEIGHBORHOOD</h2>
                     <!-- Divs for events will be dynamically coded here with jQuery -->
-                </div>
-                <div class="col-sm-5 map-container">
-                    <!-- Hard code container for map here -->
-                    <div id="neighborhood-map" class="map-display mx-auto">
-
-                    </div>
                 </div>
             </div>
         </div>
@@ -101,10 +95,6 @@
         <script src="./assets/javascript/event-search.js"></script>
         <script src="./assets/javascript/map.js"></script>
 
-        <!-- Google API -->
-        <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmgnOe6famr_fVMN3TqN9mvCOkpDucmCE&libraries=places&callback=myMap"
-            async defer></script>
     </body>
 
 
