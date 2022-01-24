@@ -1,40 +1,57 @@
-
 $(document).ready(function () {
- 
-    // If search button is clicked, set city value to whatever was input
-    $("#sBtn").on("click", function(event) {
-        event.preventDefault();
-        let userInput = $("#city-search").val().trim();
-        sessionStorage.setItem("cityName", userInput);
-        window.location = "./search.html";
-    });
+  // Run this function if user was on category page, and decided to just do the general city search in the header
+  $("#sBtn").on("click", function (event) {
+    event.preventDefault();
+    let userInput = $("#city-search").val().trim();
+    sessionStorage.setItem("cityName", userInput);
+    sessionStorage.setItem("redirect", true);
+    window.location.href = "./search.html";
+  });
 
-    // If no city has been entered in search, run this API call for whatever category page you're on
-        
-        let category = $(".events-col").attr("data-category");
-        let eventfulApiKey = "sBvrpV2SwZr28tJg";
-        let queryUrl = `https://cors-anywhere.herokuapp.com/http://api.eventful.com/json/events/search?app_key=${eventfulApiKey}&q=halloween&c=${category}&l=phoenix+arizona&within=30&units=miles&date=future`;
+  // If no city has been entered in search, run this API call for whatever category page you're on
+  $("#cat-cit-btn").on("click", function(event) {
+      event.preventDefault();
+      let category = $(".events-col").attr("data-category");
+      let city = $("#category-city").val().trim();
+      console.log(city);
 
-        $.ajax({
-            url: queryUrl,
-            method: "GET"
-        })
-            .then(function (response) {
+      const settings = {
+        async: true,
+        crossDomain: true,
+        url: `https://google-search3.p.rapidapi.com/api/v1/search/q=halloween+events+${category}+${city}`,
+        method: "GET",
+        headers: {
+          "x-user-agent": "desktop",
+          "x-proxy-location": "US",
+          "x-rapidapi-host": "google-search3.p.rapidapi.com",
+          "x-rapidapi-key": "54e3c4abe4msh829dbb8d905b2eap1003b4jsn05bcefeb067b",
+        },
+      };
+    
+      $.ajax(settings).done(function (response) {
+        // Create temporary div to add new event divs to
+        let fragment = document.createDocumentFragment();
+        // Clear the previous city results
+        const resultsDiv = document.querySelector(".cat-cit-results");
+        resultsDiv.innerHTML = "";
+    
+        for (let i = 0; i < 8; i++) {
+          // For 8 loops, create a div with the title of an event and add to fragment
+          const eventDiv = document.createElement("div");
+          eventDiv.className = "event-div";
+          eventDiv.textContent = `${response.results[i].title}`;
+          // Also create anchor tags so results are clickable
+          const link = document.createElement("a");
+          link.href = `${response.results[i].link}`;
+          link.target = "_blank";
+          link.append(eventDiv);
+          fragment.append(link);
+        }
+    
+        // Add all the event divs to the display div
+        resultsDiv.append(fragment);
+      });
 
-                let results = JSON.parse(response);
+  })
 
-                var eventsLocs = [];
-                for (let i = 0; i < results.events.event.length; i++) {
-
-                    eventsLocs.push(results.events.event[i].venue_address);
-
-                    let eventDiv = $("<div>").attr("class", "event-div");
-                    let eventTitle = $("<h3>").text(results.events.event[i].title);
-
-                    eventDiv.append(eventTitle);
-                    $(".events-col").append(eventDiv);
-                };
-                myMap(eventsLocs);
-            });
 });
-

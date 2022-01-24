@@ -73,6 +73,9 @@ header {
     color: orange;
     margin-bottom: 45px;
 }
+#category-city {
+    font-size: 18px;
+}
 #content-div {
     background-color: rgb(27, 27, 27);
 }

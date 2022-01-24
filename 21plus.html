@@ -70,10 +70,27 @@
 
 
     <div class="container my-5" id="main">
+        <div class="row justify-content-center">
+            <div class="col-sm-auto">
+                <form class="mb-4">
+                    <div class="input-group">
+                        <input type="search" class="form-control form-control-sm mr-1" placeholder="In what city?"
+                            id="category-city">
+                        <span class="input-group-append">
+                            <button class="btn btn-outline-secondary btn-sm" type="submit" id="cat-cit-btn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
         <div class="row" id="content-div">
-            <div class="col-sm-12 events-col py-3" id="21plus-list" data-category="singles_social">
+            <div class="col-sm-12 events-col py-3" id="21plus-list" data-category="adult+only">
                 <h2>21 AND UP</h2>
-                <!-- Divs for events will be dynamically coded here with jQuery -->
+                <div class="cat-cit-results">
+                    <!-- Divs for events will be dynamically coded here with jQuery -->
+                </div>
             </div>
         </div>
     </div>
@@ -90,8 +107,8 @@
     <!-- Our Javascript & jQuery-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="./assets/javascript/event-search.js"></script>
-    <script src="./assets/javascript/map.js"></script>
+    <script type="module" src="./assets/javascript/event-search.js"></script>
+    <script type="module" src="./assets/javascript/city-search.js"></script>
 </body>
 
 </html>
