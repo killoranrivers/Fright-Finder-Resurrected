@@ -1,3 +1,11 @@
+// Create loading message to show while ajax is getting results
+let loadingMsg = document.getElementById("loading-msg");
+let loadingIcon = document.createElement("i");
+loadingIcon.classList.add("fas", "fa-spider", "fa-spin", "mr-2");
+let loadingText = document.createElement("span");
+loadingText.id = "loading-text";
+loadingText.textContent = "Loading...";
+
 // Declaring function to run city search
 function citySearch(city) {
   const settings = {
@@ -40,7 +48,7 @@ function citySearch(city) {
 
 $(document).ready(function () {
   // When search button is clicked, save user input and send to the ajax search
-  $("#sBtn").on("click", function (event) {
+  $("#sBtn").on("click", function(event) {
     event.preventDefault();
     let userInput = $("#city-search").val().trim();
     sessionStorage.setItem("cityName", userInput);

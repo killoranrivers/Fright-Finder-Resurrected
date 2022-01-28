@@ -68,12 +68,36 @@
         </header>
     </div>
 
-
+    <!-- Category Search -->
     <div class="container my-5" id="main">
+        <div class="row justify-content-center">
+            <div class="col-sm-auto">
+                <form class="mb-4">
+                    <div class="input-group">
+                        <input type="search" class="form-control form-control-sm mr-1" placeholder="In what city?"
+                            id="category-city">
+                        <span class="input-group-append">
+                            <button class="btn btn-outline-secondary btn-sm" type="submit" id="cat-cit-btn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="mb-4" id="loading-div">
+            <div class="d-flex justify-content-center align-items-center" id="loading-msg">
+                <!-- Loading icon and message will be inserted with Javascript when search button is clicked -->
+            </div>
+        </div>
+
         <div class="row" id="content-div">
-            <div class="col-sm-12 events-col py-3" id="family-list" data-category="family_fun_kids">
+            <div class="col-sm-12 events-col py-3" id="family-list" data-category="family+kids">
                 <h2>FAMILY FRIENDLY</h2>
-                <!-- Divs for events will be dynamically coded here with jQuery -->
+                <div class="cat-cit-results">
+                    <!-- Divs for events will be dynamically coded here with jQuery -->
+                </div>
             </div>
         </div>
     </div>
@@ -91,7 +115,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="./assets/javascript/event-search.js"></script>
-    <script src="./assets/javascript/map.js"></script>
 </body>
 
 </html>

@@ -71,10 +71,18 @@ header {
     font-family: 'Creepster', cursive, serif;
     font-size: 40px;
     color: orange;
-    margin-bottom: 45px;
+    margin-bottom: 20px;
 }
 #category-city {
     font-size: 18px;
+}
+.fa-spider {
+    color: white;
+    font-size: 30px;
+}
+#loading-text {
+    color: white;
+    font-size: 25px;
 }
 #content-div {
     background-color: rgb(27, 27, 27);

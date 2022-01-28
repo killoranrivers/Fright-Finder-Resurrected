@@ -69,33 +69,56 @@
         </header>
     </div>
 
+    <!-- Category Search -->
+    <div class="container my-5" id="main">
+        <div class="row justify-content-center">
+            <div class="col-sm-auto">
+                <form class="mb-4">
+                    <div class="input-group">
+                        <input type="search" class="form-control form-control-sm mr-1" placeholder="In what city?"
+                            id="category-city">
+                        <span class="input-group-append">
+                            <button class="btn btn-outline-secondary btn-sm" type="submit" id="cat-cit-btn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
 
-    <body>
-        <div class="container my-5" id="main">
-            <div class="row" id="content-div">
-                <div class="col-sm-12 events-col py-3" id="neighborhood-list" data-category="community">
-                    <h2>IN YOUR NEIGHBORHOOD</h2>
+        <div class="mb-4" id="loading-div">
+            <div class="d-flex justify-content-center align-items-center" id="loading-msg">
+                <!-- Loading icon and message will be inserted with Javascript when search button is clicked -->
+            </div>
+        </div>
+
+        <div class="row" id="content-div">
+            <div class="col-sm-12 events-col py-3" id="neighborhood-list"
+                data-category="community+neighborhood+nextdoor">
+                <h2>IN YOUR NEIGHBORHOOD</h2>
+                <div class="cat-cit-results">
                     <!-- Divs for events will be dynamically coded here with jQuery -->
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Bootstrap jQuery and JS-->
+    <!-- Bootstrap jQuery and JS-->
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 
-        <!-- Our Javascript & jQuery-->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="./assets/javascript/event-search.js"></script>
-        <script src="./assets/javascript/map.js"></script>
+    <!-- Our Javascript & jQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="./assets/javascript/event-search.js"></script>
+    <script src="./assets/javascript/map.js"></script>
 
-    </body>
-
+</body>
 
 </html>
