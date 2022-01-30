@@ -1,16 +1,16 @@
 $(document).ready(function () {
   // Create loading message to show while ajax is getting results
-  let loadingMsg = document.getElementById("loading-msg");
-  let loadingIcon = document.createElement("i");
+  const loadingMsg = document.getElementById("loading-msg");
+  const loadingIcon = document.createElement("i");
   loadingIcon.classList.add("fas", "fa-spider", "fa-spin", "mr-2");
-  let loadingText = document.createElement("span");
+  const loadingText = document.createElement("span");
   loadingText.id = "loading-text";
   loadingText.textContent = "Loading...";
 
   // Run this function if user was on category page, and decided to just do the general city search in the header
   $("#sBtn").on("click", function (event) {
     event.preventDefault();
-    let userInput = $("#city-search").val().trim();
+    const userInput = $("#city-search").val().trim();
     sessionStorage.setItem("cityName", userInput);
     sessionStorage.setItem("redirect", true);
     window.location.href = "./search.html";
@@ -20,8 +20,8 @@ $(document).ready(function () {
   $("#cat-cit-btn").on("click", function (event) {
     loadingMsg.append(loadingIcon, loadingText);
     event.preventDefault();
-    let category = $(".events-col").attr("data-category");
-    let city = $("#category-city").val().trim();
+    const category = $(".events-col").attr("data-category");
+    const city = $("#category-city").val().trim();
 
     const settings = {
       async: true,
@@ -39,9 +39,9 @@ $(document).ready(function () {
     $.ajax(settings).done(function (response) {
       loadingMsg.innerHTML = "";
       // Create temporary div to add new event divs to
-      let fragment = document.createDocumentFragment();
+      const fragment = document.createDocumentFragment();
       // Clear the previous city results
-      const resultsDiv = document.querySelector(".cat-cit-results");
+      const resultsDiv = document.querySelector(".results-div");
       resultsDiv.innerHTML = "";
 
       for (let i = 0; i < 8; i++) {
