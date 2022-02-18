@@ -2,11 +2,9 @@
     box-sizing: border-box;
 }
 body {
+    min-height: 100%;
     background-color: black;
     font-family: Arial, Helvetica, sans-serif;
-}
-.navbar {
-    background-color: black;
 }
 header {
     background-image: url("../images/bats2.png");
@@ -42,6 +40,9 @@ header {
     font-size: 18px;
     font-weight: bold;
 }
+#search-bar input::placeholder {
+    color: transparent;
+}
 .dropdown-menu {
     box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -52,19 +53,17 @@ header {
 .dropdown-item {
     font-size: 20px;
 }
-
 #main {
     background: black;
 }
-#main p {
+#site-description {
     font-family: 'Open Sans Condensed', sans-serif;
     color: rgb(250, 177, 41);
     font-size: 26px;
     font-weight: bold;
     line-height: 1.5em;
-    padding: 0px 50px 40px;
+    padding: 40px 50px;
     text-align: center;
-    padding-top: 40px;
 }
 #main h2 {
     text-align: center;
@@ -110,4 +109,65 @@ header {
     display: inline-block;
     line-height: 25px;
     vertical-align: middle;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    html {
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+    }
+    body {
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+    }
+    header {
+        background-image: url("../images/bats-mobile.png");
+        padding: 10px 0px;
+    }
+    #page-title a {
+        font-size: 50px;
+    }
+    #page-title h5 {
+        font-size: 15px;
+    }
+    #search-bar {
+        width: 75%;
+        margin: 0 auto;
+    }
+    #search-label {
+        display: none;
+    }
+    #search-bar input::placeholder {
+        color: rgb(150, 148, 148);
+    }
+    #cat-dropdown {
+        margin-top: 10px;
+        text-align: center;
+    }
+    #dropdownMenuLink {
+        font-size: 15px;
+    }
+    .dropdown-menu {
+        width: 100%;
+      } 
+    #content-div {
+        background-color: black;
+    }
+    #site-description {
+        order: 2;
+        line-height: 1em;
+        padding: 20px 10px;
+        font-size: 22px;
+    }
+    .event-div p {
+        display: inline-block;
+        line-height: normal;
+        vertical-align: middle;
+    } 
+    #cat-city-form {
+        margin-top: 25px;
+    }
+    #loading-div {
+        margin-top: 10px;
+    }
 }

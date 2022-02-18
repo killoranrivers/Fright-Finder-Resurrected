@@ -34,7 +34,9 @@ $(document).ready(function () {
         // For 8 loops, create a div with the title of an event and add to fragment
         const eventDiv = document.createElement("div");
         eventDiv.className = "event-div";
-        eventDiv.textContent = `${response.results[i].title}`;
+        const eventText = document.createElement("p");
+        eventText.textContent = `${response.results[i].title}`;
+        eventDiv.append(eventText);
         // Also create anchor tags so results are clickable
         const link = document.createElement("a");
         link.href = `${response.results[i].link}`;
