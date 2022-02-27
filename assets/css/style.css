@@ -84,7 +84,7 @@ header {
     font-size: 25px;
 }
 #content-div {
-    background-color: rgb(27, 27, 27);
+    background-color: rgb(53, 53, 53);
 }
 .carousel {
     margin: 15px auto;
@@ -96,13 +96,18 @@ header {
 .event-div {
     background: white;
     color: black;
+    border: 3px solid black;
     height: 75px;
     padding: 0px 15px;
     line-height: 75px;
-    margin: 5px;
+    margin: 10px;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 20px;
     text-align: center;
+    box-shadow: 0 0 16px 6px black;
+}
+.event-div:hover {
+    border: 3px solid orange;
 }
 .events-col h3 {
     font-weight: bold;
@@ -158,6 +163,10 @@ header {
         line-height: 1em;
         padding: 20px 10px;
         font-size: 22px;
+    }
+    .event-div {
+        box-shadow: 0 0 12px 2px rgb(156, 155, 155);
+        margin: 12px;
     }
     .event-div p {
         display: inline-block;
